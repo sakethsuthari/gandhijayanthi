@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        window.onresize = function (event) {
+                document.location.reload(true);
+            }
+            var href = window.location.href.split("/")
+            var html_location = href[href.length - 1]
+            if (window.innerWidth >= 960 && html_location !== "code.html") {
+                window.location = "code.html";
+            }
+            if (window.innerWidth < 960 && html_location !== "error.html") {
+                window.location = "error.html";
+            }
+    </script>
+</body>
+</html>
